@@ -1,36 +1,9 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
-
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+SELECT nested_0.Cont_Size AS Cont_Size, nested_0.Cont_Type AS Cont_Type, nested_0.Gate_In_Date AS Gate_In_Date, nested_0.Gate_In_Time AS Gate_In_Time, nested_0.Out_Trucking_Company AS Out_Trucking_Company, nested_0.Truck_ID AS Truck_ID, nested_0.Truck_No AS Truck_No, nested_0.Booking_No AS Booking_No, nested_0.Line AS Line, nested_0.EIR_NO AS EIR_NO, nested_0.Remarks AS Remarks, nested_0.Mode_Of_Gate_Out AS Mode_Of_Gate_Out, nested_0.Seal AS Seal, nested_0.Container_Grade AS Container_Grade, nested_0.Gate_Out_Date AS Gate_Out_Date, nested_0.Gate_Out_Time AS Gate_Out_Time, nested_0.RCM AS RCM, nested_0.Lead_time AS Lead_time, nested_0.GATE_OUT_Week AS GATE_OUT_Week, nested_0.GATE_OUT_Month AS GATE_OUT_Month, nested_0.DF AS DF, nested_0."BY" AS "BY", nested_0.BY_BAND AS BY_BAND, nested_0.Cont_No AS Cont_No, join_container_move.eqpno AS eqpno, join_container_move.container_move_id AS container_move_id, join_container_move.container_id AS container_id, join_container_move.move AS move, join_container_move.activity AS activity, join_container_move.next_activity AS next_activity, join_container_move.activity_timestamp AS activity_timestamp, join_container_move.move_timestamp AS move_timestamp, join_container_move.move_sequence AS move_sequence, join_container_move.next_move_timestamp AS next_move_timestamp, join_container_move.last_update_timestamp AS last_update_timestamp, join_container_move.activity_for AS activity_for, join_container_move.activity_week AS activity_week, join_container_move.is_empty AS is_empty, join_container_move.cargo_weight_kg AS cargo_weight_kg, join_container_move.cargo_weight_lb AS cargo_weight_lb, join_container_move.load_port_location_id AS load_port_location_id, join_container_move.discharge_port_location_id AS discharge_port_location_id, join_container_move.activity_location_id AS activity_location_id, join_container_move.next_move_location_id AS next_move_location_id, join_container_move.port_of_receipt_location_id AS port_of_receipt_location_id, join_container_move.place_of_delivery_location_id AS place_of_delivery_location_id, join_container_move.final_discharge_port_location_id AS final_discharge_port_location_id, join_container_move.service_line_code AS service_line_code, join_container_move.damage_code AS damage_code, join_container_move.vessel_id AS vessel_id, join_container_move.voyage_code AS voyage_code, join_container_move.train_code AS train_code, join_container_move.train_trip_number AS train_trip_number, join_container_move.railcar_code AS railcar_code, join_container_move.slot_vessel AS slot_vessel, join_container_move.bay_vessel AS bay_vessel, join_container_move.carrier_code AS carrier_code, join_container_move.operator_code AS operator_code, join_container_move.vessel_next_id AS vessel_next_id, join_container_move.next_voyage_code AS next_voyage_code, join_container_move.equipment_type AS equipment_type, join_container_move.equipment_type_rock AS equipment_type_rock, join_container_move.equipment_size AS equipment_size, join_container_move.equipment_group AS equipment_group, join_container_move.equipment_dimensions AS equipment_dimensions, join_container_move.equipment_own_type AS equipment_own_type, join_container_move.equipment_inspected_status AS equipment_inspected_status, join_container_move.equipment_cleaned_status AS equipment_cleaned_status, join_container_move.equipment_sound_status AS equipment_sound_status, join_container_move.equipment_surveyed_status AS equipment_surveyed_status, join_container_move.equipment_repair_auth AS equipment_repair_auth, join_container_move.equipment_repair_status AS equipment_repair_status, join_container_move.equipment_blocked_status AS equipment_blocked_status, join_container_move.equipment_redelivery_status AS equipment_redelivery_status, join_container_move.equipment_sell_scrap_status AS equipment_sell_scrap_status, join_container_move.is_live_reference AS is_live_reference, join_container_move.receipt_service AS receipt_service, join_container_move.delivery_service AS delivery_service, join_container_move.genset_id AS genset_id, join_container_move.placomp AS placomp, join_container_move.placontr AS placontr, join_container_move.plawho AS plawho, join_container_move.shipment_version_instance_id AS shipment_version_instance_id, join_container_move.booking_number AS booking_number, join_container_move.contractual_customer_id AS contractual_customer_id, join_container_move.rkem_booking_number AS rkem_booking_number, join_container_move.work_order AS work_order, join_container_move.customer_reference AS customer_reference, join_container_move.location_id AS location_id, join_container_move.location AS location, join_container_move.location_type AS location_type, join_container_move.site_type AS site_type, join_container_move.lat AS lat, join_container_move.lon AS lon, join_container_move.geohash AS geohash, join_container_move.city_id AS city_id, join_container_move.city AS city, join_container_move.country_id AS country_id, join_container_move.country AS country, join_container_move.cluster_id AS cluster_id, join_container_move.cluster AS cluster, join_container_move.region_id AS region_id, join_container_move.region AS region, join_container_move.loc_id AS loc_id, join_container_move.loc AS loc, join_container_move.pool_id AS pool_id, join_container_move.pool AS pool, join_container_move.stuffed_hs_commodity_code AS stuffed_hs_commodity_code, join_container_move.stuffed_commodity_name AS stuffed_commodity_name, join_container_move.parent_commodity_name AS parent_commodity_name, join_container_move.next_move AS next_move, join_container_move.next_activity_for AS next_activity_for, join_container_move.next_move_empty AS next_move_empty, join_container_move.next_operator_code AS next_operator_code, join_container_move.prev_move AS prev_move, join_container_move.prev_move_timestamp AS prev_move_timestamp, join_container_move.prev_activity_for AS prev_activity_for, join_container_move.prev_activity_location AS prev_activity_location, join_container_move.prev_move_empty AS prev_move_empty, join_container_move.prev_operator_code AS prev_operator_code, join_container_move.local1 AS local1, join_container_move.local2 AS local2, join_container_move.is_transhipment AS is_transhipment
+FROM (
+  SELECT Cont_No, Cont_Size, Cont_Type, Gate_In_Date, Gate_In_Time, Out_Trucking_Company, Truck_ID, Truck_No, Booking_No, Line, EIR_NO, Remarks, Mode_Of_Gate_Out, Seal, Container_Grade, Gate_Out_Date, Gate_Out_Time, RCM, Lead_time, GATE_OUT_Week, GATE_OUT_Month, DF, PTIS_GATE_OUT_VOLUME."BY" AS "BY", BY_BAND
+  FROM "@Selvakumar.Elangovan@maersk.com".PTIS_GATE_OUT_VOLUME AS PTIS_GATE_OUT_VOLUME
+) nested_0
+ LEFT JOIN DatalakeStorage_Curated.foundry.models.container_move AS join_container_move ON nested_0.Cont_No = 
+ join_container_move.eqpno AND join_container_move.activity = 'LOAD' AND join_container_move.is_empty = 'true' AND join_container_move.activity_location_id = 'MYTPPTM'
+ AND (join_container_move.move_timestamp) > '2023-01-01'
+//select * from DatalakeStorage_Curated.foundry.models.container_move where char(move_timestamp,'mm/dd/yyyy') like ('01/23%')
